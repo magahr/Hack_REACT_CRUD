@@ -21,11 +21,12 @@ const App2 = () => {
                             </li>
                         </ul>
                     </div>
+                   
                 </div>
             </nav>
             <Routes>
-                <Route path='/home' element={<Home />} />        *// Ruta por defecto, muestra Home
-                <Route path='/form' element={<Form />} />    *// Ruta para el formulario
+                <Route path='/home' element={<Home />} />              *// Ruta por defecto, muestra Home
+                <Route path='/form' element={<Form />} />              *// Ruta para el formulario
                 <Route path='/form/:studentId' element={<Form/>} />    *// Ruta para el formulario
             </Routes> 
        </Router>
@@ -34,7 +35,7 @@ const App2 = () => {
 
 export default App2;
 
-/*
+/*  
 <ul className='navbar-nav'>
     <li className='nav-item'>
         <Link className='nav-link' to='/form'>Formulario</Link>

@@ -5,7 +5,9 @@ import * as Yup from 'yup';
 const FormSchema = Yup.object().shape({
   name: Yup.string().required('Nombre es requerido'),
   age: Yup.number().required('Edad es requerida').positive().integer(),
+  correo:  Yup.string().required('El correo es requerida'),
   major: Yup.string().required('Profesion es requerida')
+  
 })
 
 const StudentForm = ({ student, onSubmit }) => {
@@ -15,7 +17,8 @@ const StudentForm = ({ student, onSubmit }) => {
       initialValues={{
         name: student ? student.name : '',
         age: student ? student.edad : '',
-        major: student ? student.major : '',
+        correo: student ? student.correo : '',
+        major: student ? student.major : ''
       }}
       validationSchema={FormSchema}
       onSubmit={onSubmit}
@@ -31,6 +34,11 @@ const StudentForm = ({ student, onSubmit }) => {
             <label htmlFor="age">Edad</label>
             <Field name="age" type="number" />
             <ErrorMessage name="age" component="div" />
+          </div>
+          <div>
+            <label htmlFor="correo">Correo</label> (Corrected typo)
+            <Field name="correo" type="text" />
+            <ErrorMessage name="major" component="div" />
           </div>
           <div>
             <label htmlFor="major">Profesion</label> (Corrected typo)
