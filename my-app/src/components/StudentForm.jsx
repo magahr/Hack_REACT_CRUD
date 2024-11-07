@@ -36,12 +36,12 @@ const StudentForm = ({ student, onSubmit }) => {
             <ErrorMessage name="age" component="div" />
           </div>
           <div>
-            <label htmlFor="correo">Correo</label> (Corrected typo)
+            <label htmlFor="correo">Correo</label>
             <Field name="correo" type="text" />
             <ErrorMessage name="major" component="div" />
           </div>
           <div>
-            <label htmlFor="major">Profesion</label> (Corrected typo)
+            <label htmlFor="major">Profesion</label> 
             <Field name="major" type="text" />
             <ErrorMessage name="major" component="div" />
           </div>
